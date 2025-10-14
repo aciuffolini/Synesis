@@ -38,6 +38,11 @@ jobs:
           cd apps/web
           npm run build
 
+      - name: Verify build output
+        run: |
+          ls -la apps/web/dist/
+          echo "Build completed successfully"
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
@@ -52,6 +57,9 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
+    permissions:
+      pages: write
+      id-token: write
     steps:
       - name: Deploy to GitHub Pages
         id: deployment

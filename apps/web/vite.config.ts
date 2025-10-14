@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 import { VitePWA } from "vite-plugin-pwa";
 
 export default defineConfig({
-  base: "/synesis/",            // 👈 importante para GitHub Pages
+  base: "/Synesis/",            // 👈 importante para GitHub Pages
   plugins: [
     react(),
     VitePWA({
@@ -11,8 +11,8 @@ export default defineConfig({
       manifest: {
         name: "Synesis Risk",
         short_name: "Synesis",
-        start_url: "/synesis/", // 👈 igual que base
-        scope: "/synesis/",     // 👈 igual que base
+        start_url: "/Synesis/", // 👈 igual que base
+        scope: "/Synesis/",     // 👈 igual que base
         display: "standalone",
         background_color: "#000000",
         theme_color: "#000000",
